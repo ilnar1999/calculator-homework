@@ -55,7 +55,7 @@ public class ParseService {
         if (!this.operators.isEmpty()) {
             valueOfLastOperator = ArithmeticOperations.getValueBySymbol(operators.peek());
             valueOfCurrentElement = ArithmeticOperations.getValueBySymbol(elementOfExpression);
-            if (valueOfCurrentElement < valueOfLastOperator) {
+            if (valueOfCurrentElement <= valueOfLastOperator && valueOfCurrentElement != 1) {
                 this.elementsInReversPolishNotation.add(this.operators.pop());
             }
         }

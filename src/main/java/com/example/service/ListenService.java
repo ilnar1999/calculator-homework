@@ -43,6 +43,7 @@ public class ListenService {
             } else {
                 try {
                     elementsOfExpression = this.parseService.parseExpressionInReversePolishNotation(elementsOfExpression);
+                    System.out.println(elementsOfExpression);
                     this.displayService.printResult(this.calculationService.getResult(elementsOfExpression));
                 } catch (ParenthesisException | ArithmeticException e) {
                     this.displayService.printException(e);
