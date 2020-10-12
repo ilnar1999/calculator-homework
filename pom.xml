@@ -6,7 +6,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>calculator-homework</artifactId>
-    <version>${POM_VERSION}</version>
+    <version>${BUILD_NUMBER}</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
