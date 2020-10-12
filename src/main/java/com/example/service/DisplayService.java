@@ -9,14 +9,14 @@ import java.util.List;
 public class DisplayService {
 
     public void printExceptions(List<Exception> exceptions) {
-        System.out.println("Выражение содержит следующие ошибки:");
+        System.out.println("Р’С‹СЂР°Р¶РµРЅРёРµ СЃРѕРґРµСЂР¶РёС‚ СЃР»РµРґСѓСЋС‰РёРµ РѕС€РёР±РєРё:");
         for (Exception exception : exceptions) {
             System.out.println(exception.getMessage());
         }
     }
 
     public void printException(Exception exception) {
-        System.out.println("Выражение содержит следующие ошибки:");
+        System.out.println("Р’С‹СЂР°Р¶РµРЅРёРµ СЃРѕРґРµСЂР¶РёС‚ СЃР»РµРґСѓСЋС‰РёРµ РѕС€РёР±РєРё:");
         System.out.println(exception.getMessage());
     }
 

@@ -37,13 +37,13 @@ public class ParseService {
         String currentOperator;
 
         if (operators.isEmpty()) {
-            throw new ParenthesisException(" - скобки не согласованны");
+            throw new ParenthesisException(" - СЃРєРѕР±РєРё РЅРµ СЃРѕРіР»Р°СЃРѕРІР°РЅРЅС‹");
         }
         currentOperator = this.operators.pop();
         while (!currentOperator.equals(ArithmeticOperations.OPENING_PARENTHESIS.getSymbol())) {
             this.elementsInReversPolishNotation.add(currentOperator);
             if (operators.isEmpty()) {
-                throw new ParenthesisException(" - скобки не согласованны");
+                throw new ParenthesisException(" - СЃРєРѕР±РєРё РЅРµ СЃРѕРіР»Р°СЃРѕРІР°РЅРЅС‹");
             }
             currentOperator = this.operators.pop();
         }

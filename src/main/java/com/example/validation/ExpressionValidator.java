@@ -19,23 +19,23 @@ public class ExpressionValidator {
         this.elementsOfExpression = elementsOfExpression;
 
         if (this.elementsOfExpression.isEmpty()) {
-            exceptions.add(new EmptyRowException(" - введена пустая строка"));
+            exceptions.add(new EmptyRowException(" - РІРІРµРґРµРЅР° РїСѓСЃС‚Р°СЏ СЃС‚СЂРѕРєР°"));
             return exceptions;
         }
         if (this.isNotRecognized()) {
-            exceptions.add(new ExpressionIsNotRecognizedException(" - не распознано"));
+            exceptions.add(new ExpressionIsNotRecognizedException(" - РЅРµ СЂР°СЃРїРѕР·РЅР°РЅРѕ"));
         }
         if (this.beginsWithOperator()) {
-            exceptions.add(new ExpressionIsNotRecognizedException(" - начинается с оператора"));
+            exceptions.add(new ExpressionIsNotRecognizedException(" - РЅР°С‡РёРЅР°РµС‚СЃСЏ СЃ РѕРїРµСЂР°С‚РѕСЂР°"));
         }
         if (this.endsWithOperator()) {
-            exceptions.add(new ExpressionIsNotRecognizedException(" - заканчивается оператором"));
+            exceptions.add(new ExpressionIsNotRecognizedException(" - Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ РѕРїРµСЂР°С‚РѕСЂРѕРј"));
         }
         if (this.hasOperatorsOnEachOther()) {
-            exceptions.add(new ExpressionIsNotRecognizedException(" - несколько операторов идут подряд"));
+            exceptions.add(new ExpressionIsNotRecognizedException(" - РЅРµСЃРєРѕР»СЊРєРѕ РѕРїРµСЂР°С‚РѕСЂРѕРІ РёРґСѓС‚ РїРѕРґСЂСЏРґ"));
         }
         if (this.hasOperandsOnEachOther()) {
-            exceptions.add(new ExpressionIsNotRecognizedException(" - несколько чисел идут подряд"));
+            exceptions.add(new ExpressionIsNotRecognizedException(" - РЅРµСЃРєРѕР»СЊРєРѕ С‡РёСЃРµР» РёРґСѓС‚ РїРѕРґСЂСЏРґ"));
         }
 
         return exceptions;
